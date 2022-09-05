@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura de Datos</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Ejercicio 10</h1>
+    <p class="azul">Rutas</p>
+  </div>
+
+        <div class = 'content-info'>
+            <form>
+                <div>
+                    <label for="txtName">Nombre de la base:</label> 
+                    <input type='text' id='txtName'>            
+                </div>
+                <div>
+                    <label for="txtMinutes">Minutos:</label> 
+                    <input type='number' id='txtMinutes'>          
+                </div>
+                <div>                       
+                    <label for="txtHour">Hora de inicio:</label> 
+                    <input type='number' id='txtHour'>          
+                </div>                              
+                <div>
+                    <button type='button' id='btnAdd'>Agregar base</button>             
+                    <button type='button' id='btnDelete'>Eliminar base</button>                           
+                    <button type='button' id='btnList'>Listar bases</button>            
+                    <button type='button' id='btnCreate'>Crear tarjeta</button>                  
+                </div>                        
+            </form>            
+        <div id='details'></div>
+        <div>
+            <table id= 'table'></table>
+        </div>
+    </div>
+    <script src="main.js" type="module"></script>    
+</body>
+</html>

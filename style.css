@@ -1,0 +1,74 @@
+* {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: #393e46;
+  margin: 0;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: 40px;
+  text-align: center;
+  color: #2c3258;
+}
+
+p {
+  text-align: center;
+  margin-top: 20px;
+}
+
+input {
+  padding-top: 5px;
+}
+
+.header {
+  background: linear-gradient(to right, blue, yellow, white, brown, black);
+  height: 90px;
+  padding-top: 20px;
+}
+
+.left {
+  width: 50%;
+  float: left;
+}
+
+.right {
+  margin-left: 50%;
+}
+
+button {
+  margin: 2px;
+}
+
+input {
+  padding: 9px;
+  margin: 5px 0;
+  border: 2px solid rgb(184, 184, 184);
+  border-radius: 9px;
+  -webkit-box-shadow: 0px 7px 23px -5px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 7px 23px -5px rgba(0, 0, 0, 0.08);
+}
+
+table,
+th,
+td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  width: 40%;
+}
+
+th,
+td {
+  padding: 5px;
+}
+
+.card {
+  padding: 5px;
+  margin: 16px;
+  width: 20%;
+  border: 4px solid rgb(0, 0, 0);
+}
+
+.content-info {
+  width: 95%;
+  margin: 0 auto;
+}

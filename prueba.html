@@ -1,0 +1,272 @@
+<style>
+  body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+  }
+  </style>
+  
+  
+  <script>
+  // You can use the console window at the bottom
+  
+  class Persona{
+      constructor(codigo,nombre){
+          this.nombre=nombre;
+          this.codigo=codigo;
+          this.siguiente=null;
+          this.anterior=null;
+      }
+      info(){
+        return this.codigo + ":-> " + this.nombre;
+      }
+  }
+                               m
+    2      6           7
+        4     5
+    3     8   (  )
+    
+    
+    
+    
+    
+    
+    
+    
+         n:X
+       t           
+  i:B>   <G<>P<>X
+     \<F>/
+     caso especial
+     nuevo.anterior=temp
+     temp.siguiente=nuevo
+     
+     
+     
+     
+    IF NUEVO<INICIO
+       nuevo.siguiente=this.inicio
+       this.inicio.anterior=nuevo
+       THIS.INICIO=NUEVO
+    'Ya halle donde
+       nuevo.siguiente=temp
+       nuevo.anterior=temp.anterior
+       temp.anterior.siguiente=nuevo
+       temp.anterior=nuevo
+       
+       
+       
+  class Grupo{
+      constructor(){
+          this.inicio=null;
+      }
+  
+                    t   n
+      i:A<>B<>C<>D<>E<>{F}
+      agregar(nuevo){
+          if (this.inicio==null){
+              this.inicio=nuevo;
+          } else {
+              let temp=this.inicio;
+              while (temp.siguiente!=null){
+                  temp=temp.siguiente;
+              }
+              temp.siguiente=nuevo;
+              nuevo.anterior=temp
+          }
+      }
+    
+    
+    
+      agregar(nuevo){    
+        if (this.inicio==null)
+          this.inicio=nuevo;
+        else              
+          this._agregar(nuevo,this.inicio);
+      }
+   
+      _agregar(nuevo,ultimo){
+        if (ultimo.siguiente==null)
+            ultimo.siguiente=nuevo; //....
+        else            
+          this._agregar(nuevo,ultimo.siguiente);
+      }
+   
+      listar(){
+        let datos='';
+        let temp=this.inicio;
+        while (temp!=null){
+          datos += temp.info() + "\n"
+          temp=temp.siguiente;
+        }
+        return datos;
+      }
+   
+      listarInverso(){
+        let datos='';
+        let temp=this.inicio;
+        while (temp!=null){
+          datos = temp.info() + "\n" + datos
+          temp=temp.siguiente;
+        }
+        return datos;
+      }
+   
+   
+   
+      listar2(){
+        if (!this.inicio)
+          return "";
+        else
+          return this._listarRec(this.inicio);;
+      }
+        _listarRec(nodo){
+        if (nodo.siguiente==null)
+          return nodo.info();
+        else
+          return nodo.info() + this._listarRec(nodo.siguiente);
+      }          
+   
+   
+   
+   
+      buscar(codigo){
+        if (!this.inicio)
+          return null;
+        let aux=this.inicio;
+        while(aux!=null){
+          if (aux.codigo==codigo)
+            return aux;
+          aux=aux.siguiente;
+        }
+        return null;
+      }
+   
+    t
+     i:B<>C<>D
+    eliminar(A)
+    if dato=this.inicio.dato....
+       elim=this.inicio;
+       this.inicio=this.inicio.siguiente;
+       this.inicio.anterior=null
+       elim.sig=null
+       return elim
+       -> {<A>}
+   
+           eliminar(codigo){
+              //this.inicio.siguiente=
+        //this.inicio.siguiente.siguiente;
+  
+        let eliminado=null;
+        if (!this.inicio)
+          return null;
+        if (this.inicio.codigo==codigo){
+          eliminado=this.inicio;
+          this.inicio=this.inicio.siguiente;
+          return eliminado;
+        } else {
+          let an=this.inicio;
+          let ac=this.inicio.siguiente;
+          while(ac!=null){
+            if (ac.codigo==codigo){
+              an.siguiente=an.siguiente.siguiente;
+              eliminado=ac;
+              eliminado.siguiente=null;
+              return eliminado;
+            } else {
+              an=ac;
+              ac=ac.siguiente;
+            }
+          }
+          return null;
+        }
+      }
+  }
+   
+    let g3g=new Grupo();
+    let p1=new Persona(1,'A');
+    g3g.agregar(p1);
+    p1=new Persona(2,'B');
+    g3g.agregar(p1);
+    p1=new Persona(3,'C');
+    g3g.agregar(p1);
+    p1=new Persona(4,'D');
+    g3g.agregar(p1);
+    p1=new Persona(5,'E');
+    g3g.agregar(p1);
+    p1=new Persona(6,'F');
+    g3g.agregar(p1);
+    console.log(g3g.listar());
+   
+    let b=g3g.buscar(9);
+    if (b==null)
+      console.log('No existe el codigo 9');
+    else
+      console.log(b.info());
+   
+    b=g3g.buscar(3);
+    if (b==null)
+      console.log('No existe el codigo 3');
+    else
+      console.log(b.info());
+  
+    let e=g3g.eliminar(9);
+    if (e==null)
+      console.log('No existe 3');
+    else
+      console.log('Se elimino ' + e.info());
+    console.log(g3g.listar2());//recursiva
+    console.log(g3g.listarInverso());
+  
+  MONGODB
+  .  
+  .
+  .
+  .   4  ......
+  .
+  .
+  .
+  .    8 .......
+  .
+  .   10  .......
+  .
+  .
+  .
+  
+  
+  
+  
+  
+  [0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 20]
+  [a j c g q k h
+  [cd]=nuevo
+  
+  cod nom  cant   precio
+  1000 datos
+  0 4   A   ..............  
+  1 6   B
+  2 2   C
+  3 1   F   ..............
+  4 9   O  .................
+  5 7   K
+  6 8   L  ................
+     Indice
+  1 3
+  2 2
+  4 0
+  6 1   
+  7 5
+  8 6     
+  9 4   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </script>  
